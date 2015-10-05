@@ -260,3 +260,7 @@ Devise.setup do |config|
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
 end
+
+Warden::Manager.before_logout do |user,auth,opts|
+  user.workables.update_all locked_by: nil
+end

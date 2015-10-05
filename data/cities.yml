@@ -1,0 +1,832 @@
+---
+India:
+  Maharashtra:
+    Mumbai:
+      population: 12478447
+      census_year: 2011
+    Pune:
+      population: 3115431
+      census_year: 2011
+    Nagpur:
+      population: 2405421
+      census_year: 2011
+    Thane:
+      population: 1818872
+      census_year: 2011
+    Pimpri-Chinchwad:
+      population: 1729359
+      census_year: 2011
+    Nashik:
+      population: 1486973
+      census_year: 2011
+    Kalyan-Dombivali:
+      population: 1246381
+      census_year: 2011
+    Vasai-Virar:
+      population: 1221233
+      census_year: 2011
+    Aurangabad:
+      population: 1171330
+      census_year: 2011
+    Navi Mumbai:
+      population: 1119477
+      census_year: 2011
+    Solapur:
+      population: 951118
+      census_year: 2011
+    Mira-Bhayandar:
+      population: 814655
+      census_year: 2011
+    Bhiwandi:
+      population: 711329
+      census_year: 2011
+    Amravati:
+      population: 646801
+      census_year: 2011
+    Nanded:
+      population: 550564
+      census_year: 2011
+    Kolhapur:
+      population: 549283
+      census_year: 2011
+    Ulhasnagar:
+      population: 506937
+      census_year: 2011
+    Sangli-Miraj & Kupwad:
+      population: 502697
+      census_year: 2011
+    Malegaon:
+      population: 471006
+      census_year: 2011
+    Jalgaon:
+      population: 460468
+      census_year: 2011
+    Akola:
+      population: 427146
+      census_year: 2011
+    Latur:
+      population: 382754
+      census_year: 2011
+    Dhule:
+      population: 376093
+      census_year: 2011
+    Ahmednagar:
+      population: 350905
+      census_year: 2011
+    Chandrapur:
+      population: 321036
+      census_year: 2011
+    Parbhani:
+      population: 307191
+      census_year: 2011
+    Ichalkaranji:
+      population: 287570
+      census_year: 2011
+    Jalna:
+      population: 285349
+      census_year: 2011
+    Ambernath:
+      population: 254003
+      census_year: 2011
+    Bhusawal:
+      population: 187750
+      census_year: 2011
+    Panvel:
+      population: 180464
+      census_year: 2011
+    Badlapur:
+      population: 175516
+      census_year: 2011
+    Beed:
+      population: 146237
+      census_year: 2011
+    Barshi:
+      population: 118573
+      census_year: 2011
+    Achalpur:
+      population: 112293
+      census_year: 2011
+    Osmanabad:
+      population: 112085
+      census_year: 2011
+    Nandurbar:
+      population: 111067
+      census_year: 2011
+    Wardha:
+      population: 105543
+      census_year: 2011
+    Udgir:
+      population: 104063
+      census_year: 2011
+    Hinganghat:
+      population: 101805
+      census_year: 2011
+  Delhi:
+    Delhi:
+      population: 11007835
+      census_year: 2011
+    Kirari Suleman Nagar:
+      population: 282598
+      census_year: 2011
+    New Delhi:
+      population: 249998
+      census_year: 2011
+    Karawal Nagar:
+      population: 224666
+      census_year: 2011
+  Karnataka:
+    Bangalore:
+      population: 8425970
+      census_year: 2011
+    Hubballi-Dharwad:
+      population: 943857
+      census_year: 2011
+    Mysore:
+      population: 887446
+      census_year: 2011
+    Gulbarga:
+      population: 532031
+      census_year: 2011
+    Mangalore:
+      population: 499486
+      census_year: 2011
+    Belgaum:
+      population: 488292
+      census_year: 2011
+    Davanagere:
+      population: 435128
+      census_year: 2011
+    Bellary:
+      population: 409644
+      census_year: 2011
+    Bijapur:
+      population: 326360
+      census_year: 2011
+    Shivamogga (Shimoga):
+      population: 322428
+      census_year: 2011
+    Tumkur:
+      population: 305821
+      census_year: 2011
+    Raichur:
+      population: 232456
+      census_year: 2011
+  Telangana:
+    Hyderabad:
+      population: 7170545
+      census_year: 2011
+    Warangal:
+      population: 811844
+      census_year: 2011
+    Nizamabad:
+      population: 310467
+      census_year: 2011
+    Karimnagar:
+      population: 260899
+      census_year: 2011
+    Ramagundam:
+      population: 229632
+      census_year: 2011
+    Secunderabad:
+      population: 213698
+      census_year: 2011
+    Khammam:
+      population: 184210
+      census_year: 2011
+    Mahbubnagar:
+      population: 157733
+      census_year: 2011
+    Nalgonda:
+      population: 135744
+      census_year: 2011
+    Adilabad:
+      population: 117167
+      census_year: 2011
+    Suryapet:
+      population: 105250
+      census_year: 2011
+    Miryalaguda:
+      population: 103855
+      census_year: 2011
+  Gujarat:
+    Ahmedabad:
+      population: 5570585
+      census_year: 2011
+    Surat:
+      population: 4462002
+      census_year: 2011
+    Vadodara:
+      population: 1666703
+      census_year: 2011
+    Rajkot:
+      population: 1286995
+      census_year: 2011
+    Bhavnagar:
+      population: 593768
+      census_year: 2011
+    Jamnagar:
+      population: 529308
+      census_year: 2011
+    Junagadh:
+      population: 320250
+      census_year: 2011
+    Gandhidham:
+      population: 248705
+      census_year: 2011
+  Tamil Nadu:
+    Chennai:
+      population: 4681087
+      census_year: 2011
+    Coimbatore:
+      population: 1061447
+      census_year: 2011
+    Madurai:
+      population: 1016885
+      census_year: 2011
+    Tiruchirappalli:
+      population: 916674
+      census_year: 2011
+    Salem:
+      population: 831038
+      census_year: 2011
+    Ambattur:
+      population: 478134
+      census_year: 2011
+    Tirunelveli:
+      population: 474838
+      census_year: 2011
+    Tirupur:
+      population: 444543
+      census_year: 2011
+    Avadi:
+      population: 344701
+      census_year: 2011
+    Tiruvottiyur:
+      population: 248059
+      census_year: 2011
+    Thoothukudi:
+      population: 237374
+      census_year: 2011
+    Nagercoil:
+      population: 224329
+      census_year: 2011
+    Thanjavur:
+      population: 222619
+      census_year: 2011
+  West Bengal:
+    Kolkata:
+      population: 4486679
+      census_year: 2011
+    Howrah:
+      population: 1072161
+      census_year: 2011
+    Durgapur:
+      population: 566937
+      census_year: 2011
+    Asansol:
+      population: 564491
+      census_year: 2011
+    Siliguri:
+      population: 509709
+      census_year: 2011
+    Maheshtala:
+      population: 449423
+      census_year: 2011
+    Rajpur Sonarpur:
+      population: 423806
+      census_year: 2011
+    South Dumdum:
+      population: 410524
+      census_year: 2011
+    Gopalpur:
+      population: 404991
+      census_year: 2011
+    Bhatpara:
+      population: 390467
+      census_year: 2011
+    Panihati:
+      population: 383522
+      census_year: 2011
+    Kamarhati:
+      population: 336579
+      census_year: 2011
+    Bardhaman:
+      population: 314638
+      census_year: 2011
+    Kulti:
+      population: 313977
+      census_year: 2011
+    Bally:
+      population: 291972
+      census_year: 2011
+    Barasat:
+      population: 283443
+      census_year: 2011
+    North Dumdum:
+      population: 253625
+      census_year: 2011
+    Baranagar:
+      population: 248466
+      census_year: 2011
+  Rajasthan:
+    Jaipur:
+      population: 3073350
+      census_year: 2011
+    Jodhpur:
+      population: 1033918
+      census_year: 2011
+    Kota:
+      population: 1001365
+      census_year: 2011
+    Bikaner:
+      population: 647804
+      census_year: 2011
+    Ajmer:
+      population: 542580
+      census_year: 2011
+    Udaipur:
+      population: 451735
+      census_year: 2011
+    Bhilwara:
+      population: 360009
+      census_year: 2011
+    Alwar:
+      population: 315310
+      census_year: 2011
+    Bharatpur:
+      population: 252109
+      census_year: 2011
+    Sikar:
+      population: 237579
+      census_year: 2011
+    Pali:
+      population: 229956
+      census_year: 2011
+    Sri Ganganagar:
+      population: 224773
+      census_year: 2011
+  Uttar Pradesh:
+    Lucknow:
+      population: 2815601
+      census_year: 2011
+    Kanpur:
+      population: 2767031
+      census_year: 2011
+    Ghaziabad:
+      population: 1636068
+      census_year: 2011
+    Agra:
+      population: 1574542
+      census_year: 2011
+    Meerut:
+      population: 1309023
+      census_year: 2011
+    Varanasi:
+      population: 1201815
+      census_year: 2011
+    Allahabad:
+      population: 1117094
+      census_year: 2011
+    Bareilly:
+      population: 898167
+      census_year: 2011
+    Moradabad:
+      population: 889810
+      census_year: 2011
+    Aligarh:
+      population: 872575
+      census_year: 2011
+    Saharanpur:
+      population: 703345
+      census_year: 2011
+    Gorakhpur:
+      population: 671048
+      census_year: 2011
+    Noida:
+      population: 642381
+      census_year: 2011
+    Firozabad:
+      population: 603797
+      census_year: 2011
+    Loni:
+      population: 512296
+      census_year: 2011
+    Jhansi:
+      population: 507293
+      census_year: 2011
+    Muzaffarnagar:
+      population: 392451
+      census_year: 2011
+    Mathura:
+      population: 349336
+      census_year: 2011
+    Shahjahanpur:
+      population: 327975
+      census_year: 2011
+    Rampur:
+      population: 325248
+      census_year: 2011
+    Mau:
+      population: 279060
+      census_year: 2011
+    Farrukhabad:
+      population: 275750
+      census_year: 2011
+    Hapur:
+      population: 262801
+      census_year: 2011
+    Etawah:
+      population: 256790
+      census_year: 2011
+    Mirzapur:
+      population: 233691
+      census_year: 2011
+    Bulandshahr:
+      population: 222826
+      census_year: 2011
+  Madhya Pradesh:
+    Indore:
+      population: 1960631
+      census_year: 2011
+    Bhopal:
+      population: 1795648
+      census_year: 2011
+    Jabalpur:
+      population: 1054336
+      census_year: 2011
+    Gwalior:
+      population: 1053505
+      census_year: 2011
+    Ujjain:
+      population: 515215
+      census_year: 2011
+    Dewas:
+      population: 289438
+      census_year: 2011
+    Satna:
+      population: 280248
+      census_year: 2011
+    Sagar:
+      population: 273357
+      census_year: 2011
+    Ratlam:
+      population: 264810
+      census_year: 2011
+    Rewa:
+      population: 235422
+      census_year: 2011
+  Andhra Pradesh:
+    Visakhapatnam:
+      population: 1897823
+      census_year: 2011
+    Vijayawada:
+      population: 1034358
+      census_year: 2011
+    Guntur:
+      population: 743354
+      census_year: 2011
+    Nellore:
+      population: 600869
+      census_year: 2011
+    Kurnool:
+      population: 430214
+      census_year: 2011
+    Rajahmundry:
+      population: 419818
+      census_year: 2011
+    Kadapa:
+      population: 343054
+      census_year: 2011
+    Kakinada:
+      population: 312538
+      census_year: 2011
+    Tirupati:
+      population: 287482
+      census_year: 2011
+    Anantapur:
+      population: 261004
+      census_year: 2011
+    Vizianagaram:
+      population: 228025
+      census_year: 2011
+    Eluru:
+      population: 214414
+      census_year: 2011
+    Ongole:
+      population: 204746
+      census_year: 2011
+    Nandyal:
+      population: 200516
+      census_year: 2011
+    Machilipatnam:
+      population: 169892
+      census_year: 2011
+    Adoni:
+      population: 166344
+      census_year: 2011
+    Tenali:
+      population: 164649
+      census_year: 2011
+    Proddatur:
+      population: 162717
+      census_year: 2011
+    Chittor:
+      population: 153756
+      census_year: 2011
+    Hindupur:
+      population: 151677
+      census_year: 2011
+    Bhimavaram:
+      population: 142184
+      census_year: 2011
+    Madanapalle:
+      population: 136414
+      census_year: 2011
+    Guntakal:
+      population: 126270
+      census_year: 2011
+    Srikakulam:
+      population: 125939
+      census_year: 2011
+    Dharmavaram:
+      population: 121874
+      census_year: 2011
+    Gudivada:
+      population: 118167
+      census_year: 2011
+    Narasaraopet:
+      population: 116329
+      census_year: 2011
+    Tadpatri:
+      population: 108249
+      census_year: 2011
+    Tadepalligudem:
+      population: 103577
+      census_year: 2011
+    Chilakaluripet:
+      population: 101550
+      census_year: 2011
+  Bihar:
+    Patna:
+      population: 1683200
+      census_year: 2011
+    Gaya:
+      population: 463454
+      census_year: 2011
+    Bhagalpur:
+      population: 398138
+      census_year: 2011
+    Muzaffarpur:
+      population: 351838
+      census_year: 2011
+    Bihar Sharif:
+      population: 296889
+      census_year: 2011
+    Darbhanga:
+      population: 294116
+      census_year: 2011
+    Purnia:
+      population: 280547
+      census_year: 2011
+    Arrah:
+      population: 261099
+      census_year: 2011
+    Begusarai:
+      population: 251136
+      census_year: 2011
+    Katihar:
+      population: 225982
+      census_year: 2011
+    Hajipur:
+      population: 147688
+      census_year: 2011
+  Punjab:
+    Ludhiana:
+      population: 1613878
+      census_year: 2011
+    Amritsar:
+      population: 1132761
+      census_year: 2011
+    Jalandhar:
+      population: 862196
+      census_year: 2011
+    Patiala:
+      population: 405164
+      census_year: 2011
+    Bathinda:
+      population: 285813
+      census_year: 2011
+    Hoshiarpur:
+      population: 168443
+      census_year: 2011
+    Batala:
+      population: 156400
+      census_year: 2011
+    Moga:
+      population: 150432
+      census_year: 2011
+    Pathankot:
+      population: 148357
+      census_year: 2011
+    S.A.S Nagar:
+      population: 146104
+      census_year: 2011
+    Abohar:
+      population: 145238
+      census_year: 2011
+    Malerkotla:
+      population: 135330
+      census_year: 2011
+    Khanna:
+      population: 128130
+      census_year: 2011
+    Muktsar:
+      population: 117085
+      census_year: 2011
+    Barnala:
+      population: 116454
+      census_year: 2011
+    Firozpur:
+      population: 110091
+      census_year: 2011
+    Kapurthala:
+      population: 101654
+      census_year: 2011
+  Haryana:
+    Faridabad:
+      population: 1404653
+      census_year: 2011
+    Gurgaon:
+      population: 876824
+      census_year: 2011
+    Rohtak:
+      population: 373133
+      census_year: 2011
+    Hisar:
+      population: 301249
+      census_year: 2011
+    Panipat:
+      population: 294150
+      census_year: 2011
+    Karnal:
+      population: 286974
+      census_year: 2011
+    Sonipat:
+      population: 277053
+      census_year: 2011
+    Yamunanagar:
+      population: 216628
+      census_year: 2011
+    Panchkula:
+      population: 210175
+      census_year: 2011
+    Bhiwani:
+      population: 197662
+      census_year: 2011
+    Ambala:
+      population: 196216
+      census_year: 2011
+    Sirsa:
+      population: 183282
+      census_year: 2011
+    Bahadurgarh:
+      population: 170424
+      census_year: 2011
+    Jind:
+      population: 166225
+      census_year: 2011
+    Thanesar:
+      population: 154962
+      census_year: 2011
+    Kaithal:
+      population: 144633
+      census_year: 2011
+    Rewari:
+      population: 140864
+      census_year: 2011
+    Palwal:
+      population: 127931
+      census_year: 2011
+    Jagadhri:
+      population: 124915
+      census_year: 2011
+    Ambala Sadar:
+      population: 104268
+      census_year: 2011
+  Jammu and Kashmir:
+    Srinagar:
+      population: 1192792
+      census_year: 2011
+    Anantnag:
+      population: 108505
+      census_year: 2011
+    Jammu:
+      population: 503690
+      census_year: 2011
+  Jharkhand:
+    Dhanbad:
+      population: 1161561
+      census_year: 2011
+    Ranchi:
+      population: 1073440
+      census_year: 2011
+    Jamshedpur:
+      population: 629659
+      census_year: 2011
+    Bokaro:
+      population: 413934
+      census_year: 2011
+    Mango:
+      population: 224002
+      census_year: 2011
+  Chhattisgarh:
+    Raipur:
+      population: 1010087
+      census_year: 2011
+    Bhilai:
+      population: 625697
+      census_year: 2011
+    Korba:
+      population: 363210
+      census_year: 2011
+    Bilaspur:
+      population: 330106
+      census_year: 2011
+    Durg:
+      population: 268679
+      census_year: 2011
+  Assam:
+    Guwahati:
+      population: 963429
+      census_year: 2011
+  Chandigarh:
+    Chandigarh:
+      population: 960787
+      census_year: 2011
+  Orissa:
+    Bhubaneswar:
+      population: 837737
+      census_year: 2011
+    Cuttack:
+      population: 606007
+      census_year: 2011
+    Brahmapur:
+      population: 355823
+      census_year: 2011
+    Rourkela:
+      population: 273217
+      census_year: 2011
+  Kerala:
+    Thiruvananthapuram:
+      population: 752490
+      census_year: 2011
+    Kochi:
+      population: 601574
+      census_year: 2011
+    Kozhikode:
+      population: 432097
+      census_year: 2011
+    Kollam:
+      population: 349033
+      census_year: 2011
+    Thrissur:
+      population: 315596
+      census_year: 2011
+  Uttarakhand:
+    Dehradun:
+      population: 578420
+      census_year: 2011
+    Haridwar:
+      population: 225235
+      census_year: 2011
+    Haldwani:
+      population: 156060
+      census_year: 2011
+    Rudrapur:
+      population: 140884
+      census_year: 2011
+    Kashipur:
+      population: 121610
+      census_year: 2011
+    Roorkee:
+      population: 118188
+      census_year: 2011
+  Tripura:
+    Agartala:
+      population: 399688
+      census_year: 2011
+  Puducherry:
+    Ozhukarai:
+      population: 300028
+      census_year: 2011
+    Puducherry:
+      population: 241773
+      census_year: 2011
+  Mizoram:
+    Aizawl:
+      population: 291822
+      census_year: 2011
+  Manipur:
+    Imphal:
+      population: 264986
+      census_year: 2011

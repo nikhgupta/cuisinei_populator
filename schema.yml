@@ -1,0 +1,24 @@
+chain:
+  - has many places
+place:
+  - belongs to chain
+  - has one reference
+  - has one location
+item:
+  - belongs to place
+location:
+  - belongs to place
+
+city:
+  - lat, lng, etc.
+source:
+  - has many references, etc.
+reference:
+  - belongs to source
+  - belongs to place
+  - has many reference images
+  - has many reference menu documents
+reference images:
+  - belongs to reference
+reference_menu_documents:
+  - belongs to reference

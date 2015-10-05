@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151005010627) do
+ActiveRecord::Schema.define(version: 20151005065433) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,61 @@ ActiveRecord::Schema.define(version: 20151005010627) do
   add_index "active_admin_comments", ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id", using: :btree
   add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace", using: :btree
   add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
+
+  create_table "cities", force: :cascade do |t|
+    t.string   "name",                                                         null: false
+    t.string   "state",                                                        null: false
+    t.string   "country",                                                      null: false
+    t.decimal  "lat_pos",                precision: 13, scale: 10
+    t.decimal  "lng_pos",                precision: 13, scale: 10
+    t.decimal  "lat_min",                precision: 13, scale: 10
+    t.decimal  "lat_max",                precision: 13, scale: 10
+    t.decimal  "lng_min",                precision: 13, scale: 10
+    t.decimal  "lng_max",                precision: 13, scale: 10
+    t.integer  "population"
+    t.integer  "census_year"
+    t.integer  "priority",                                         default: 0
+    t.integer  "places_count",                                     default: 0
+    t.integer  "completed_places_count",                           default: 0
+    t.datetime "geocoded_at"
+    t.datetime "completed_at"
+    t.datetime "created_at",                                                   null: false
+    t.datetime "updated_at",                                                   null: false
+  end
+
+  add_index "cities", ["name", "state", "country"], name: "index_cities_on_name_and_state_and_country", unique: true, using: :btree
+
+  create_table "items", force: :cascade do |t|
+    t.integer  "place_id"
+    t.string   "name"
+    t.text     "description"
+    t.integer  "cost"
+    t.string   "min_time"
+    t.string   "max_time"
+    t.text     "extra"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "items", ["place_id"], name: "index_items_on_place_id", using: :btree
+
+  create_table "places", force: :cascade do |t|
+    t.integer  "city_id",                                                  null: false
+    t.string   "title"
+    t.text     "address"
+    t.decimal  "lat",                precision: 13, scale: 10
+    t.decimal  "lng",                precision: 13, scale: 10
+    t.string   "establishment_name"
+    t.integer  "ref_id"
+    t.decimal  "ref_rating",         precision: 3,  scale: 2
+    t.integer  "ref_votes_count",                              default: 0
+    t.text     "raw_snippet"
+    t.integer  "locked_by"
+    t.integer  "items_count",                                  default: 0
+    t.datetime "completed_at"
+    t.datetime "created_at",                                               null: false
+    t.datetime "updated_at",                                               null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -50,4 +105,5 @@ ActiveRecord::Schema.define(version: 20151005010627) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "items", "places"
 end

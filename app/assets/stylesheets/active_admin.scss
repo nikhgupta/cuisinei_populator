@@ -18,3 +18,27 @@
 #footer {
   p { display: none; }
 }
+
+td.col {
+  &.col-population {
+    text-align: right;
+  }
+}
+
+.panel.place-details {
+  .zomato-link {
+    padding: 20px 40px;
+    background-color: #666;
+    font-size: 32px;
+    text-decoration: none;
+    color: white;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    left: 15%;
+    position: absolute;
+    margin-top: 80px;
+  }
+  .static-map {
+    border: 4px solid #ddd;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
+}
