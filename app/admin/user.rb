@@ -1,6 +1,10 @@
 ActiveAdmin.register User do
   permit_params :email, :password, :password_confirmation
 
+  action_item :add do
+    link_to "Start Working...", new_place_path
+  end
+
   index do
     selectable_column
     id_column

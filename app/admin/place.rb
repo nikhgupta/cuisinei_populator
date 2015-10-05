@@ -2,7 +2,11 @@ ActiveAdmin.register Place do
   config.sort_order = "locked_by_asc"
   actions :all, except: [:show, :destroy]
 
-  permit_params items_attributes: [:name, :cost, :min_time, :max_time, :extra, :description, :_destroy]
+  permit_params items_attributes: [:id, :name, :cost, :min_time, :max_time, :extra, :description, :_destroy]
+
+  action_item :add do
+    link_to "Start Working...", new_place_path
+  end
 
   controller do
     def new

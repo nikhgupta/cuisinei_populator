@@ -21,7 +21,6 @@ file = Rails.root.join("data", "cities.yml")
 data = YAML.load_file file
 data.each do |country, states|
   states.each do |state, cities|
-    next unless state == "Rajasthan"
     cities.each do |city, info|
       ActiveRecord::Base.transaction do
         puts "Adding info for: #{city}, #{state}, #{country}"
