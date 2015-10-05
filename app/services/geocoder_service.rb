@@ -38,7 +38,7 @@ class GeocoderService
 
   def fetch_geocoding_response
     url  = "https://maps.googleapis.com/maps/api/geocode/json"
-    url += "?address=#{@address}&key=#{Rails.application.secrets.google_api_key}"
+    url += "?address=#{URI.encode @address}&key=#{Rails.application.secrets.google_api_key}"
     @json = JSON.parse open(url).read
   end
 
