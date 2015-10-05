@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+User.find_by(email: 'admin@example.com').update_attribute :admin, true
+User.create!(email: 'test@example.com', password: 'password', password_confirmation: 'password')

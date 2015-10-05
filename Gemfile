@@ -49,3 +49,5 @@ gem 'binding_of_caller', group: :development
 gem 'pry-rails', group: [:test, :development]
 gem 'dotenv-rails', group: [:test, :development]
 gem 'pundit'
+gem 'devise'
+gem 'activeadmin', github: 'activeadmin'
