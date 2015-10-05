@@ -48,3 +48,4 @@ gem 'better_errors', group: :development
 gem 'binding_of_caller', group: :development
 gem 'pry-rails', group: [:test, :development]
 gem 'dotenv-rails', group: [:test, :development]
+gem 'pundit'
