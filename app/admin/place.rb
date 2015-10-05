@@ -1,8 +1,10 @@
 ActiveAdmin.register Place, namespace: false do
+  menu false
   config.clear_action_items!
   config.sort_order = "completed_at_desc"
   actions :all, except: [:show, :destroy]
 
+  action_item(:index){ link_to "Past Assignments", places_path }
   action_item(:add){ link_to "Start Working...", new_place_path }
   permit_params items_attributes: [ :id, :name, :cost, :min_time, :max_time, :extra, :description, :_destroy ]
 
@@ -34,17 +36,24 @@ ActiveAdmin.register Place, namespace: false do
     def update
       submit_status = permitted_params[:commit].downcase
       if resource.locker && resource.locker != current_user
-        flash[:error] = "Cannot update record locked by another user."
-        redirect_to edit_place_path(resource) and return
+        message = "Cannot update record locked by another user."
       elsif !resource.locker
-        flash[:error] = "Cannot update record that was not alloted to you."
+        message = "Cannot update record that was not alloted to you."
+      elsif resource.items.blank? && submit_status.include?("completed")
+        message = "Cannot mark task without menu items as complete."
+      elsif resource.pending? && submit_status.include?("incomplete")
+        message = "Task is already pending!"
+      end
+
+      if message
+        flash[:error] = message
         redirect_to edit_place_path(resource) and return
       elsif resource.errors.empty? && submit_status.include?("completed")
         resource.complete!
       elsif resource.errors.empty? && submit_status.include?("incomplete")
         resource.pending!
       end
-      update!
+      update!{ new_place_path }
     end
   end
 
@@ -93,15 +102,15 @@ ActiveAdmin.register Place, namespace: false do
       b.input :cost
       b.input :min_time
       b.input :max_time
-      b.input :description, wrapper_html: { row: 3 }
-      b.input :extra
+      b.input :description, input_html: { rows: 3 }
+      b.input :extra, input_html: { rows: 3 }
     end
 
     f.actions do
       f.action :submit
       if f.object.completed?
         f.action :submit, label: "Mark as incomplete!"
-      elsif f.object.items_count > 0
+      else
         f.action :submit, label: "Mark as completed!"
       end
       f.action :cancel, wrapper_html: { class: 'cancel'}

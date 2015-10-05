@@ -13,12 +13,12 @@ class ApplicationController < ActionController::Base
   private
 
   def after_sign_in_path_for(resource)
-    resource.admin? ? admin_dashboard_path : dashboard_path
+    resource.admin? ? admin_dashboard_path : new_place_path
   end
 
   def user_not_authorized
     flash[:alert] = "You are not authorized to perform this action."
-    path = current_user.admin? ? admin_dashboard_path : dashboard_path
+    path = current_user.admin? ? admin_dashboard_path : new_place_path
     redirect_to(request.referrer || path)
   end
 
@@ -33,6 +33,6 @@ class ApplicationController < ActionController::Base
     return if (ns.blank? && !current_user.admin?) || (ns && current_user.send("#{ns}?"))
 
     flash[:alert] = "You seem to have wandered off to some strange world."
-    redirect_to(current_user.admin? ? admin_dashboard_path : dashboard_path)
+    redirect_to(current_user.admin? ? admin_dashboard_path : new_place_path)
   end
 end

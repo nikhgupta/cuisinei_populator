@@ -10,6 +10,7 @@ ActiveAdmin.setup do |config|
   config.namespace(false) do |namespace|
     namespace.download_links = false
     namespace.filters = false
+    namespace.root_to = 'places#new'
   end
 
   # == Site Title
