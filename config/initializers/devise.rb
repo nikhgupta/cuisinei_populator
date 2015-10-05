@@ -263,5 +263,7 @@ Devise.setup do |config|
 end
 
 Warden::Manager.before_logout do |user,auth,opts|
-  user.workables.update_all locked_by: nil
+  user.workables.each do |workable|
+    workable.locker = nil if workable.completed? || workable.items_count == 0
+  end
 end

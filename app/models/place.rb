@@ -38,4 +38,8 @@ class Place < ActiveRecord::Base
     url += "markers=color:#{options.fetch(:color, "red")}|#{location.join(",")}"
     # url += "&style=element:labels|visibility:off&style=element:geometry.stroke|visibility:off&style=feature:landscape|element:geometry|saturation:-100&style=feature:water|saturation:-100|invert_lightness:true&key=#{Rails.application.secrets.google_api_key}"
   end
+
+  def completed?
+    completed_at.present?
+  end
 end
