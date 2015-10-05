@@ -1,24 +1,23 @@
 ActiveAdmin.setup do |config|
 
-  # Custom configuration for ActiveAdmin (added via template)
-      config.site_title_link       = "/"
-      config.default_namespace     = false
-      config.show_comments_in_menu = false
-      config.authorization_adapter = ActiveAdmin::PunditAdapter
+  config.filters               = true
+  config.site_title            = "Cuisinei Populator"
+  config.site_title_link       = "/"
+  config.default_namespace     = false
+  config.show_comments_in_menu = false
+  config.authorization_adapter = ActiveAdmin::PunditAdapter
 
-      config.namespace(false) do |namespace|
-        namespace.download_links = false
-        namespace.build_menu :default do |menu|
-        
-        end
-      end
+  config.namespace(false) do |namespace|
+    namespace.download_links = false
+    namespace.filters = false
+  end
 
   # == Site Title
   #
   # Set the title that is displayed on the main layout
   # for each of the active admin pages.
   #
-  config.site_title = "Populator"
+  # config.site_title = "Populator"
 
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.

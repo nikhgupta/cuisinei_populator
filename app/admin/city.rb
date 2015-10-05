@@ -1,8 +1,8 @@
-ActiveAdmin.register City do
-  config.sort_order = "priority_desc,population_desc"
+ActiveAdmin.register City, namespace: :admin do
+  config.sort_order = "population_desc"
   actions :all, except: [:new, :create, :edit, :update, :destroy]
 
-  action_item :add do
+  action_item :add, if: ->{ !current_user.admin? } do
     link_to "Start Working...", new_place_path
   end
 

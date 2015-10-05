@@ -262,8 +262,8 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = '/my_engine/users/auth'
 end
 
-Warden::Manager.before_logout do |user,auth,opts|
-  user.workables.each do |workable|
-    workable.locker = nil if workable.completed? || workable.items_count == 0
-  end
-end
+# Warden::Manager.before_logout do |user,auth,opts|
+#   user.workables.each do |workable|
+#     workable.locker = nil if workable.completed? || workable.items_count == 0
+#   end
+# end

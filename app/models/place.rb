@@ -1,9 +1,9 @@
 class Place < ActiveRecord::Base
   belongs_to :city, counter_cache: true
-  belongs_to :locker, foreign_key: :locked_by, class_name: "User"
+  belongs_to :locker, foreign_key: :locked_by, class_name: "User", counter_cache: :workables_count
   has_many :items
 
-  accepts_nested_attributes_for :items
+  accepts_nested_attributes_for :items, allow_destroy: true
 
   scope :pending,  -> { where(completed_at: nil) }
   scope :locked,   -> { where("locked_by IS NOT NULL") }
@@ -41,5 +41,19 @@ class Place < ActiveRecord::Base
 
   def completed?
     completed_at.present?
+  end
+
+  def pending?
+    !completed?
+  end
+
+  def complete!
+    self.update_attribute :completed_at, Time.now
+    City.increment_counter :completed_places_count, city.id
+  end
+
+  def pending!
+    self.update_attribute :completed_at, nil
+    City.decrement_counter :completed_places_count, city.id
   end
 end

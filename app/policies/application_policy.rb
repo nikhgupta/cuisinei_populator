@@ -31,7 +31,7 @@ class ApplicationPolicy
   end
 
   def destroy?
-    user.admin? || scoped?
+    user.admin?
   end
 
   def destroy_all?
@@ -57,7 +57,7 @@ class ApplicationPolicy
     end
 
     def resolve
-      user.admin? ? scope.all : scope.where(user_id: @user)
+      @iuser.admin? ? scope.all : scope.where(user_id: @user)
     end
 
   end

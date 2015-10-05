@@ -40,4 +40,13 @@ class City < ActiveRecord::Base
   def has_no_pending_place?
     !has_pending_place?
   end
+
+  def requires_new_places?
+    return false if has_pending_place?
+    places_count < ENV['MIN_COVERAGE_PER_CITY'].to_i
+  end
+
+  def requires_no_new_places?
+    !requires_new_places?
+  end
 end

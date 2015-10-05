@@ -42,3 +42,21 @@ td.col {
     box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   }
 }
+a.button.has_many_add {
+  float: left;
+  margin: 10px 10px 0 0;
+}
+h4.warning {
+  background-color: #fdb;
+  padding: 5px 0;
+  color: #884;
+  border: 2px solid rgba(160,120,120, 0.3);
+  text-align: center;
+}
+h4.success {
+  background-color: #dfd;
+  border: 2px solid rgba(120,160,120, 0.3);
+  padding: 5px 0;
+  color: #884;
+  text-align: center;
+}

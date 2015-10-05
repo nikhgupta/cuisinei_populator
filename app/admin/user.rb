@@ -1,22 +1,20 @@
-ActiveAdmin.register User do
+ActiveAdmin.register User, namespace: :admin do
   permit_params :email, :password, :password_confirmation
-
-  action_item :add do
-    link_to "Start Working...", new_place_path
-  end
 
   index do
     selectable_column
     id_column
     column :email
     column :admin
-    column :current_sign_in_at
+    column :workables_count
     column :sign_in_count
+    column :current_sign_in_at
     column :created_at
     actions
   end
 
   filter :email
+  filter :workables_count, label: "#workables"
   filter :current_sign_in_at
   filter :sign_in_count
   filter :created_at
@@ -29,5 +27,4 @@ ActiveAdmin.register User do
     end
     f.actions
   end
-
 end
