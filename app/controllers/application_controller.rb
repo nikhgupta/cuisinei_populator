@@ -24,6 +24,10 @@ class ApplicationController < ActionController::Base
 
   # FIXME: This is kinda effective, but hackish.
   def redirect_namespace_if_required
+    return if request.path == destroy_user_session_path
+    return if request.path == new_user_session_path
+    redirect_to(new_user_session_path) and return unless current_user
+
     spaces = ActiveAdmin.application.namespaces.names - [:root]
     ns = spaces.detect{|s| request.path =~ /^\/#{s}/ }
     return if (ns.blank? && !current_user.admin?) || (ns && current_user.send("#{ns}?"))

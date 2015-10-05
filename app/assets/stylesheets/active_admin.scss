@@ -27,17 +27,17 @@ td.col {
 
 .panel.place-details {
   .zomato-link {
-    padding: 20px 40px;
+    padding: 15px 30px;
     background-color: #666;
-    font-size: 32px;
+    font-size: 28px;
     text-decoration: none;
     color: white;
-    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
     left: 15%;
     position: absolute;
-    margin-top: 80px;
   }
   .static-map {
+    max-width: 96%;
     border: 4px solid #ddd;
     box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   }
@@ -45,6 +45,11 @@ td.col {
 a.button.has_many_add {
   float: left;
   margin: 10px 10px 0 0;
+}
+fieldset.inputs.has_many_fields {
+    width: 49%;
+    float: left;
+    margin-right: 1%;
 }
 h4.warning {
   background-color: #fdb;

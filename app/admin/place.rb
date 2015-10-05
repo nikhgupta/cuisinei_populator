@@ -190,8 +190,8 @@ ActiveAdmin.register Place, namespace: :admin do
       b.input :cost
       b.input :min_time
       b.input :max_time
-      b.input :description, wrapper_html: { row: 3 }
-      b.input :extra
+      b.input :description, input_html: { rows: 3 }
+      b.input :extra, input_html: { rows: 3 }
     end
 
     f.actions do
