@@ -117,10 +117,7 @@ ActiveAdmin.register Place, namespace: false do
             f.has_many :items, heading: "", allow_destroy: true do |b|
               b.input :name
               b.input :cost
-              b.input :min_time
-              b.input :max_time
               b.input :description, input_html: { rows: 3 }
-              b.input :extra, input_html: { rows: 3 }
               b.input :tag_list, as: :select, multiple: true, label: "Tags", include_blank: false,
                 collection: ActsAsTaggableOn::Tag.all.map{|t| [t.name, t.name]},
                 selected: b.object.tags.pluck(:name), input_html: { class: "tagselect", style: "width: 80%" }
@@ -131,9 +128,6 @@ ActiveAdmin.register Place, namespace: false do
         f.has_many :items, class: "double-items", heading: "", allow_destroy: true do |b|
           b.input :name
           b.input :cost
-          b.input :min_time
-          b.input :max_time
-          b.input :extra, input_html: { rows: 3 }
           b.input :description, input_html: { rows: 3 }
           b.input :tag_list, as: :select, multiple: true, label: "Tags", include_blank: false,
             collection: ActsAsTaggableOn::Tag.all.map{|t| [t.name, t.name]},

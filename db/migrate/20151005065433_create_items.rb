@@ -5,9 +5,6 @@ class CreateItems < ActiveRecord::Migration
       t.string :name
       t.text :description
       t.integer :cost
-      t.string :min_time
-      t.string :max_time
-      t.text :extra
 
       t.timestamps null: false
     end

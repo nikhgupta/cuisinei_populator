@@ -59,9 +59,6 @@ ActiveRecord::Schema.define(version: 20151006064616) do
     t.string   "name"
     t.text     "description"
     t.integer  "cost"
-    t.string   "min_time"
-    t.string   "max_time"
-    t.text     "extra"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
