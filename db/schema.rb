@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151005065433) do
+ActiveRecord::Schema.define(version: 20151006060936) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -68,6 +68,17 @@ ActiveRecord::Schema.define(version: 20151005065433) do
 
   add_index "items", ["place_id"], name: "index_items_on_place_id", using: :btree
 
+  create_table "menu_images", force: :cascade do |t|
+    t.integer  "place_id"
+    t.text     "url"
+    t.string   "type"
+    t.boolean  "consumer_upload"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "menu_images", ["place_id"], name: "index_menu_images_on_place_id", using: :btree
+
   create_table "places", force: :cascade do |t|
     t.integer  "city_id",                                                  null: false
     t.string   "title"
@@ -107,4 +118,5 @@ ActiveRecord::Schema.define(version: 20151005065433) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   add_foreign_key "items", "places"
+  add_foreign_key "menu_images", "places"
 end

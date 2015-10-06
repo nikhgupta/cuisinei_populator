@@ -51,3 +51,4 @@ gem 'dotenv-rails', group: [:test, :development]
 gem 'pundit'
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
+gem 'nokogiri'

@@ -2,6 +2,7 @@ class Place < ActiveRecord::Base
   belongs_to :city, counter_cache: true
   belongs_to :locker, foreign_key: :locked_by, class_name: "User", counter_cache: :workables_count
   has_many :items
+  has_many :menu_images, dependent: :destroy
 
   accepts_nested_attributes_for :items, allow_destroy: true
 
@@ -11,6 +12,11 @@ class Place < ActiveRecord::Base
 
   def ref_url
     "http://zoma.to/r/#{ref_id}"
+  end
+
+  def complete_ref_url
+    html = Nokogiri::HTML raw_snippet
+    html.search("a.result-title").attr("href").text.strip
   end
 
   def title

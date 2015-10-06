@@ -16,6 +16,10 @@ ActiveAdmin.register Place, namespace: false do
         redirect_to action: :new
       else
         @resource = RandomPlaceGeneratorService.new(current_user, city: city).run
+        if @resource.menu_images.blank?
+          @images = ZomatoMenuScraperService.new(@resource.complete_ref_url).run
+          @resource.menu_images.create @images if @images && @images.any?
+        end
         new!
       end
     rescue ZomatoScraperService::Error => e
@@ -97,13 +101,36 @@ ActiveAdmin.register Place, namespace: false do
       end
     end
 
-    f.has_many :items, heading: "", allow_destroy: true do |b|
-      b.input :name
-      b.input :cost
-      b.input :min_time
-      b.input :max_time
-      b.input :description, input_html: { rows: 3 }
-      b.input :extra, input_html: { rows: 3 }
+    panel "Item Details" do
+      if f.object.menu_images.any?
+        columns do
+          column do
+            f.object.menu_images.each do |image|
+              img src: image.url
+            end
+          end
+
+          column do
+            f.has_many :items, heading: "", allow_destroy: true do |b|
+              b.input :name
+              b.input :cost
+              b.input :min_time
+              b.input :max_time
+              b.input :description, input_html: { rows: 3 }
+              b.input :extra, input_html: { rows: 3 }
+            end
+          end
+        end
+      else
+        f.has_many :items, class: "double-items", heading: "", allow_destroy: true do |b|
+          b.input :name
+          b.input :cost
+          b.input :min_time
+          b.input :max_time
+          b.input :description, input_html: { rows: 3 }
+          b.input :extra, input_html: { rows: 3 }
+        end
+      end
     end
 
     f.actions do
