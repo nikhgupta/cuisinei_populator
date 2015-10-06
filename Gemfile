@@ -52,3 +52,6 @@ gem 'pundit'
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
 gem 'nokogiri'
+
+gem 'acts-as-taggable-on'
+gem 'select2-rails'

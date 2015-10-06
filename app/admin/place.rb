@@ -6,7 +6,10 @@ ActiveAdmin.register Place, namespace: false do
 
   action_item(:index){ link_to "Past Assignments", places_path }
   action_item(:add){ link_to "Start Working...", new_place_path }
-  permit_params items_attributes: [ :id, :name, :cost, :min_time, :max_time, :extra, :description, :_destroy ]
+  permit_params items_attributes: [
+    :id, :name, :cost, :description, :_destroy,
+    :min_time, :max_time, :extra, tag_list: []
+  ]
 
   controller do
     def new
@@ -118,6 +121,9 @@ ActiveAdmin.register Place, namespace: false do
               b.input :max_time
               b.input :description, input_html: { rows: 3 }
               b.input :extra, input_html: { rows: 3 }
+              b.input :tag_list, as: :select, multiple: true, label: "Tags", include_blank: false,
+                collection: ActsAsTaggableOn::Tag.all.map{|t| [t.name, t.name]},
+                selected: b.object.tags.pluck(:name), input_html: { class: "tagselect", style: "width: 80%" }
             end
           end
         end
@@ -127,8 +133,11 @@ ActiveAdmin.register Place, namespace: false do
           b.input :cost
           b.input :min_time
           b.input :max_time
-          b.input :description, input_html: { rows: 3 }
           b.input :extra, input_html: { rows: 3 }
+          b.input :description, input_html: { rows: 3 }
+          b.input :tag_list, as: :select, multiple: true, label: "Tags", include_blank: false,
+            collection: ActsAsTaggableOn::Tag.all.map{|t| [t.name, t.name]},
+            selected: b.object.tags.pluck(:name), input_html: { class: "tagselect", style: "width: 80%" }
         end
       end
     end
