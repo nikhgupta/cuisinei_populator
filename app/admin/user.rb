@@ -1,5 +1,5 @@
 ActiveAdmin.register User, namespace: :admin do
-  permit_params :email, :password, :password_confirmation
+  permit_params :email, :password, :password_confirmation, :admin, :per_item_earnings
 
   index do
     selectable_column
@@ -24,6 +24,8 @@ ActiveAdmin.register User, namespace: :admin do
       f.input :email
       f.input :password
       f.input :password_confirmation
+      f.input :per_item_earnings, input_html: { placeholder: "How much to pay per menu item (not per restaurant), if hired so?", value: (f.object.on_per_item_basis? ? f.object.per_item_earnings : nil) }
+      f.input :admin, label: "<strong>User is an admin? <span style='color: #f52'>Be very very careful with this!</span></strong>".html_safe
     end
     f.actions
   end

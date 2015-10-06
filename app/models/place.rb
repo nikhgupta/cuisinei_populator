@@ -19,8 +19,12 @@ class Place < ActiveRecord::Base
     html.search("a.result-title").attr("href").text.strip
   end
 
+  def menu_url
+    "#{complete_ref_url}/menu"
+  end
+
   def title
-    "#{attribute :title}, #{city.name}"
+    "#{attribute :title}, #{city.try :name}"
   end
 
   def location
@@ -38,11 +42,9 @@ class Place < ActiveRecord::Base
   # TODO: Replace with JS map later.
   def static_map_url(options = {})
     url  = "http://maps.googleapis.com/maps/api/staticmap?"
-    # url += "center=#{city.address}&"
     url += "zoom=14&size=#{options.fetch(:size, "640x480")}&"
     url += "maptype=#{options.fetch(:type, "roadmap")}&"
     url += "markers=color:#{options.fetch(:color, "red")}|#{location.join(",")}"
-    # url += "&style=element:labels|visibility:off&style=element:geometry.stroke|visibility:off&style=feature:landscape|element:geometry|saturation:-100&style=feature:water|saturation:-100|invert_lightness:true&key=#{Rails.application.secrets.google_api_key}"
   end
 
   def completed?
@@ -61,5 +63,11 @@ class Place < ActiveRecord::Base
   def pending!
     self.update_attribute :completed_at, nil
     City.decrement_counter :completed_places_count, city.id
+  end
+
+  def fetch_images
+    return if menu_images.any?
+    images = ZomatoMenuScraperService.new(ref_menu_url).run
+    resource.menu_images.create images if images && images.any?
   end
 end

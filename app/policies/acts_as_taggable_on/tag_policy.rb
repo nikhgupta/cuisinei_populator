@@ -1,4 +1,4 @@
-class CityPolicy < ApplicationPolicy
+class ActsAsTaggableOn::TagPolicy < ApplicationPolicy
 
   def index?
     user.admin?
@@ -18,4 +18,3 @@ class CityPolicy < ApplicationPolicy
     end
   end
 end
-

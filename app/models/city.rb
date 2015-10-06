@@ -49,4 +49,13 @@ class City < ActiveRecord::Base
   def requires_no_new_places?
     !requires_new_places?
   end
+
+  def completed?
+    return true if completed_at.present?
+    has_no_pending_place? && requires_no_new_places?
+  end
+
+  def random_place_for(user)
+    RandomPlaceGeneratorService.new(user, city: self).run
+  end
 end

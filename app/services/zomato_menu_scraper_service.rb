@@ -1,9 +1,9 @@
 require 'nokogiri'
+require 'open-uri'
 
 class ZomatoMenuScraperService
   def initialize(url, options = {})
-    @url = "#{url}/menu"
-    @options = options
+    @url, @options = url, options
   end
 
   def run

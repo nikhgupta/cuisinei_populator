@@ -31,6 +31,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       # t.datetime :locked_at
 
       t.integer :workables_count, default: 0
+      t.decimal :per_item_earnings, precision: 10, scale: 2, default: 0
 
       t.timestamps null: false
     end

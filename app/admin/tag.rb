@@ -1,14 +1,15 @@
-# ActiveAdmin.register Tag, namespace: false do
-#   c
-#   controller do
+ActiveAdmin.register ActsAsTaggableOn::Tag, namespace: :admin, as: "Tag" do
+  index do
+    selectable_column
+    column :name
+    column(:items) do |tag|
+      link_to tag.taggings.count, admin_items_path(q: {taggings_tag_id_eq: tag.id})
+    end
+    actions
+  end
 
-#     def autocomplete_tags
-#       @tags = ActsAsTaggableOn::Tag.
-#         where("name LIKE ?", "#{params[:q]}%").
-#         order(:name)
-#       respond_to do |format|
-#         format.json { render json: @tags , :only => [:id, :name] }
-#       end
-#     end
-#   end
-# end
+  filter :name
+  # filter :taggings_taggable_id_in
+  # filter :items_place_in, as: :select, collection: Place.all
+  filter :taggings_count, label: "Used on (count)"
+end
