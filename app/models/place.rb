@@ -19,7 +19,7 @@ class Place < ActiveRecord::Base
     html.search("a.result-title").attr("href").text.strip
   end
 
-  def menu_url
+  def ref_menu_url
     "#{complete_ref_url}/menu"
   end
 
@@ -68,6 +68,6 @@ class Place < ActiveRecord::Base
   def fetch_images
     return if menu_images.any?
     images = ZomatoMenuScraperService.new(ref_menu_url).run
-    resource.menu_images.create images if images && images.any?
+    menu_images.create images if images && images.any?
   end
 end

@@ -55,3 +55,8 @@ gem 'nokogiri'
 
 gem 'acts-as-taggable-on'
 gem 'select2-rails'
+
+group :production do
+  gem 'rails_12factor'
+  gem 'airbrake'
+end
